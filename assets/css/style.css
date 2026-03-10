@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'Funwari';
+    src: url('../fonts/funwari-round.otf') format('opentype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ZenMaruGothic';
+    src: url('../fonts/ZenMaruGothic-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    background-color: #fcf9ed;
+}
+
+.awning {
+    height: 100px;
+    background-image: url('../images/awning.svg');
+    background-repeat: repeat-x;
+    background-position: top left;
+    background-size: auto 100%;
+}
+
+.logo-title {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #fcf9ed;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #BCD2B7;
+    text-decoration: none;
+}
+
+.logo-title h1 {
+    font-family: 'ZenMaruGothic', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #BCD2B7;
+    margin-top: 0.5rem;
+    letter-spacing: 0.03em;
+}
+
+/* ナビバー */
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    background-color: #BCD2B7;
+    margin-top: 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #FFF8F0;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-family: 'ZenMaruGothic', sans-serif;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    background-color: #F6E6A4;
+}
+
+h1,
+h2 {
+    font-family: 'ZenMaruGothic', sans-serif;
+    font-weight: 600;
+    color: #a47f5c;
+    line-height: 1.2;
+    margin: 0.5rem 0;
+}
+
+p {
+    font-family: 'ZenMaruGothic', sans-serif;
+    color: #7e634a;
+}
+
+li {
+    list-style: none;
+    color: #7e634a;
+}
