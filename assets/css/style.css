@@ -66,14 +66,14 @@ body {
 .nav-links a {
     text-decoration: none;
     color: #FFF8F0;
-    padding: 0.3rem 0.6rem;
+    padding: 0.3rem 0.4rem 0.4rem 0.4rem;
     border-radius: 6px;
     font-family: 'ZenMaruGothic', sans-serif;
     font-weight: 600;
 }
 
 .nav-links a:hover {
-    background-color: #F6E6A4;
+    background-color: #9cc5af;
 }
 
 h1,
@@ -87,10 +87,158 @@ h2 {
 
 p {
     font-family: 'ZenMaruGothic', sans-serif;
-    color: #7e634a;
+    color: #a47f5c;
 }
 
 li {
     list-style: none;
-    color: #7e634a;
+    color: #a47f5c;
+}
+
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    margin: auto;
+    background-color: #fff8f0;
+    border-radius: 12px;
+}
+
+.profile-img {
+    width: 164px;
+    height: auto;
+    border-radius: 100px;
+    margin-right: 1.8rem;
+}
+
+.profile-text {
+    flex: 1;
+}
+
+.profile-text h2 {
+    font-family: 'ZenMaruGothic', sans-serif;
+    color: #a47f5c;
+    margin-left: -0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-text p {
+    font-family: 'ZenMaruGothic', sans-serif;
+    color: #a47f5c;
+    margin-bottom: 0.5rem;
+}
+
+section {
+    max-width: 900px;
+    /* セクションの最大幅を設定 */
+    margin: 0 auto;
+    /* 左右自動で中央寄せ */
+    padding: 2rem 1rem;
+    /* 上下・左右の余白 */
+    box-sizing: border-box;
+    /* パディング込みで幅を計算 */
+}
+
+.favorite {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.favorite h2 {
+    font-family: 'ZenMaruGothic', sans-serif;
+    color: #A7C796;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* カード全体を横並びに */
+.favorite-cards {
+    display: flex;
+    flex-wrap: wrap;
+    /* 画面が狭いときは縦並び */
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* 各カードの見た目 */
+.card {
+    background-color: #FFF8F0;
+    border-radius: 12px;
+    padding: 1rem;
+    width: 200px;
+    /* 横幅固定 */
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card .icon {
+    width: 56px;
+    height: 56px;
+    display: block;
+    margin: 0 auto 0.6rem auto;
+    transition: transform 0.2s;
+}
+
+.card:hover .icon {
+    transform: scale(1.1);
+}
+
+.game-icon {
+    transform: scale(1.4);
+}
+
+.card:hover .game-icon {
+    transform: scale(1.5);
+}
+
+.card h3 {
+    font-family: 'ZenMaruGothic', sans-serif;
+    color: #A7C796;
+    margin-bottom: 0.3rem;
+}
+
+.card p {
+    font-family: 'ZenMaruGothic', sans-serif;
+    color: #a47f5c;
+    font-size: 0.95rem;
+}
+.friends{
+  text-align:center;
+  margin:3rem auto;
+}
+
+.friend-banners{
+  display:flex;
+  justify-content:center;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+
+.friend-banners img{
+  width:200px;
+  height:auto;
+  border-radius:8px;
+  transition:transform 0.2s;
+}
+
+.friend-banners img:hover{
+  transform:scale(1.05);
+}
+.site-footer {
+    background-color: #BCD2B7;
+    /* メイングリーン */
+    text-align: center;
+    /* 中央寄せ */
+    padding: 0.2rem 0;
+    /* 上下に余白 */
+    font-family: 'ZenMaruGothic', sans-serif;
+    font-size: 0.7rem;
+    /* 少し小さめの文字 */
+    /* 文字はクリーム色でかわいく */
+    margin-top: 2rem;
+    /* 本文との間に余白 */
 }
