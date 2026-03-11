@@ -3,46 +3,66 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>TOP</title>
+    <title>About Me</title>
     <link rel="stylesheet" href="assets/css/uaplus.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/profile.css"> <!-- 固有CSS -->
 </head>
 
 <body>
-    <header class="header">
-        <!-- オーニング部分は背景だけ -->
-        <div class="awning"></div>
+      <header class="header">
+    <!-- オーニング部分は背景だけ -->
+    <div class="awning"></div>
+  
+    <!-- ロゴ＋フレーズ -->
+    <div class="logo-title">
+      <div class="logo">
+        <a href="index.html" class="active">くれはる</a>
+      </div>
+      <h1>あなたとみつける、あなたとつくる</h1>
+      <p>パンみたいなふかふか耳のバーチャルわんこクリエイター、くれはるのホームページへようこそ！</p>
+    </div>
+  
+    <!-- シンプルナビ -->
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Top</a></li>
+        <li><a href="profile.html">About Me</a></li>
+        <li><a href="works.html">My Art</a></li>
+        <li><a href="flavors.html">Flavors</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <!-- ロゴ＋フレーズはオーニングの下 -->
-        <div class="logo-title">
-            <div class="logo">
-                <a href="index.html">くれはる</a>
-            </div>
-            <h1>あなたとみつける、あなたとつくる</h1>
-            <p>パンみたいなふかふか耳のバーチャルわんこクリエイター、くれはるのホームページへようこそ！</p>
-        </div>
-
-        <!-- シンプルナビ -->
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="profile.html">About Me</a></li>
-                <li><a href="works.html">My Art</a></li>
-                <li><a href="flavors.html">Flavors</a></li>
-                <li><a href="links.html">Links</a></li>
-                <li><a href="friends.html">Friends</a></li>
-            </ul>
-        </nav>
-    </header>
     <main>
+        <!-- プロフィール -->
         <section class="profile">
-            <img src="assets/images/kureharu-icon.jpg" alt="くれはる(プレーン)立ち絵" class="profile-img">
+            <img src="assets/images/kureharu-icon.jpg" alt="くれはる立ち絵" class="profile-img">
+
             <div class="profile-text">
                 <h2>くれはる</h2>
                 <p>イラストを中心にいろいろつくるいぬ</p>
                 <p>ふんわり淡い色彩がとくい</p>
                 <p>心が柔らかくなるような作品をつくりたい</p>
             </div>
+
+            <div class="profile-icons">
+                <a href="https://x.com/kureharuchan" target="_blank" class="tooltip">
+                    <img src="assets/images/chat_bubble.svg" alt="X" class="icon-img">
+                    <span class="tooltiptext">つぶやき・告知</span>
+                </a>
+                <a href="https://www.twitch.tv/kureharuchan" target="_blank" class="tooltip">
+                    <img src="assets/images/live_tv.svg" alt="Twitch" class="icon-img">
+                    <span class="tooltiptext">配信</span>
+                </a>
+                <a href="https://www.youtube.com/@kureharuchan/shorts" target="_blank" class="tooltip">
+                    <img src="assets/images/music_video.svg" alt="YouTube Shorts" class="icon-img">
+                    <span class="tooltiptext">ショート動画</span>
+                </a>
+            </div>
         </section>
+
+        <!-- 好きなもの -->
         <section class="favorite">
             <h2>好きなもの</h2>
             <div class="favorite-cards">
@@ -74,25 +94,21 @@
                         <p>鳥、恐竜</p>
                     </div>
                 </div>
+            </div>
         </section>
+
+        <!-- おともだち -->
         <section class="friends">
             <h2>おともだち</h2>
-
             <div class="friend-banners">
-                <a href="#">
-                    <img src="images/banner1.png" alt="お友達1">
-                </a>
-
-                <a href="#">
-                    <img src="images/banner2.png" alt="お友達2">
-                </a>
-
-                <a href="#">
-                    <img src="images/banner3.png" alt="お友達3">
-                </a>
+                <a href="#"><img src="assets/images/coming-soon-banner.png" alt="かみんぐすーん"></a>
+                <a href="#"><img src="assets/images/coming-soon-banner.png" alt="かみんぐすーん"></a>
+                <a href="#"><img src="assets/images/coming-soon-banner.png" alt="かみんぐすーん"></a>
+                <a href="#"><img src="assets/images/coming-soon-banner.png" alt="かみんぐすーん"></a>
             </div>
         </section>
     </main>
+
     <footer class="site-footer">
         <p>© 2026 KUREHARUCHAN. All rights reserved.</p>
     </footer>

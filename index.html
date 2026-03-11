@@ -5,51 +5,46 @@
   <meta charset="UTF-8">
   <title>TOP</title>
   <link rel="stylesheet" href="assets/css/uaplus.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/index.css"> <!-- トップページ固有 -->
 </head>
 
 <body>
   <header class="header">
     <!-- オーニング部分は背景だけ -->
     <div class="awning"></div>
-
-    <!-- ロゴ＋フレーズはオーニングの下 -->
+  
+    <!-- ロゴ＋フレーズ -->
     <div class="logo-title">
       <div class="logo">
-        <a href="index.html">くれはる</a>
+        <a href="index.html" class="active">くれはる</a>
       </div>
       <h1>あなたとみつける、あなたとつくる</h1>
-      <p>ふわふわ耳のわんこ系Vtuber、くれはるのホームページへようこそ！</p>
+      <p>パンみたいなふかふか耳のバーチャルわんこクリエイター、くれはるのホームページへようこそ！</p>
     </div>
-
+  
     <!-- シンプルナビ -->
     <nav class="navbar">
       <ul class="nav-links">
+        <li><a href="index.html" class="active">Top</a></li>
         <li><a href="profile.html">About Me</a></li>
         <li><a href="works.html">My Art</a></li>
         <li><a href="flavors.html">Flavors</a></li>
-        <li><a href="links.html">Links</a></li>
-        <li><a href="friends.html">Friends</a></li>
       </ul>
     </nav>
   </header>
-  <main>
-    <!-- 最新情報 -->
-    <section class="news">
-      <h2>最新情報</h2>
-      <ul>
-        <li>3/15 新しいフレーバー「いちごミルク」公開！</li>
-        <li>3/10 配信予定：お菓子作り配信🎀</li>
-      </ul>
-    </section>
 
+  <main>
     <!-- 作品ギャラリーのダイジェスト -->
     <section class="works-digest">
       <h2>作品ギャラリー</h2>
       <div class="works-grid">
-        <a href="works.html"><img src="images/work1.jpg" alt="作品1"></a>
-        <a href="works.html"><img src="images/work2.jpg" alt="作品2"></a>
-        <a href="works.html"><img src="images/work3.jpg" alt="作品3"></a>
+        <a href="works.html"><img src="images/work1.jpg" alt="くれはるの作品1"></a>
+        <a href="works.html"><img src="images/work2.jpg" alt="くれはるの作品2"></a>
+        <a href="works.html"><img src="images/work3.jpg" alt="くれはるの作品3"></a>
+      </div>
+      <div class="more-link-container">
+        <a href="works.html" class="more-link">もっとみる</a>
       </div>
     </section>
 
@@ -61,17 +56,15 @@
         <a href="flavors.html"><img src="images/flavor2.png" alt="フレーバー2"></a>
         <a href="flavors.html"><img src="images/flavor3.png" alt="フレーバー3"></a>
       </div>
-    </section>
-
-    <!-- SNSリンク -->
-    <section class="sns-links">
-      <h2>Follow Me</h2>
-      <a href="https://x.com/kureharuchan" target="_blank">X</a>
-      <a href="https://www.twitch.tv/kureharuchan" target="_blank">Twitch</a>
+      <div class="more-link-container">
+        <a href="flavors.html" class="more-link">もっとみる</a>
+      </div>
     </section>
   </main>
+
   <footer class="site-footer">
     <p>© 2026 KUREHARUCHAN. All rights reserved.</p>
   </footer>
 </body>
+
 </html>

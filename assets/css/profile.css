@@ -1,0 +1,169 @@
+/* プロフィールセクション */
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: 2rem auto;
+    gap: 2rem;
+    background-color: #fff8f0;
+    border-radius: 12px;
+    padding: 2rem 1rem;
+    align-items: flex-start;
+}
+
+/* プロフィール画像をまんまるに */
+.profile-img {
+    width: 164px;
+    height: 164px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* 画像の縦横比を保ったまま切り抜き */
+}
+
+/* プロフィールテキスト */
+.profile-text {
+    flex: none;
+    width: 325px;
+}
+
+.profile-text h2 {
+    margin-bottom: 0.5rem;
+}
+
+.profile-text p {
+    margin-bottom: 0.5rem;
+}
+
+/* SNSアイコン縦並び */
+.profile-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* アイコン背景を削除し、画像用のサイズ調整 */
+/* SNSアイコン画像用 */
+.icon-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* ツールチップ全体 */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+/* 吹き出しテキスト（右側に表示・アニメーション付き） */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  max-width: 200px;
+  background-color: #A7C796; 
+  color: #FFF8F0;
+  text-align: center;
+  padding: 0.8rem;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 10;
+  left: 120%;           /* 基準位置 */
+  top: 50%;
+  line-height: 0;
+  transform: translateY(-50%) translateX(-10px); /* 最初は少し右寄せ */
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* フェード + スライド */
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+/* 吹き出しの三角（左向き） */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -11px;           /* 吹き出し左側に三角 */
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent #A7C796 transparent transparent; 
+}
+
+/* ホバーで表示 */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-50%) translateX(0); /* スライドして定位置へ */
+}
+
+/* 好きなものカード */
+.favorite h2 {
+    text-align: center;
+    color: #A7C796;
+    margin-bottom: 1.5rem;
+}
+
+.favorite-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.card {
+    background-color: #FFF8F0;
+    border-radius: 12px;
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card .icon {
+    width: 56px;
+    height: 56px;
+    display: block;
+    margin: 0 auto 0.6rem auto;
+    transition: transform 0.2s;
+}
+
+.card:hover .icon {
+    transform: scale(1.1);
+}
+
+.card h3 {
+    color: #A7C796;
+    margin-bottom: 0.3rem;
+}
+
+.card p {
+    color: #a47f5c;
+    font-size: 0.95rem;
+}
+
+/* おともだちバナー */
+.friends {
+    text-align: center;
+    margin: 3rem auto;
+}
+
+.friend-banners {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.friend-banners img {
+    width: 200px;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.friend-banners img:hover {
+    transform: scale(1.05);
+}

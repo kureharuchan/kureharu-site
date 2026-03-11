@@ -1,3 +1,6 @@
+/* =================================
+   フォント設定
+================================= */
 @font-face {
     font-family: 'Funwari';
     src: url('../fonts/funwari-round.otf') format('opentype');
@@ -11,11 +14,19 @@
     font-style: normal;
 }
 
+/* =================================
+   ボディ・共通
+================================= */
 body {
     margin: 0;
     background-color: #fcf9ed;
+    font-family: 'ZenMaruGothic', sans-serif;
+    color: #a47f5c;
 }
 
+/* =================================
+   オーニング
+================================= */
 .awning {
     height: 100px;
     background-image: url('../images/awning.svg');
@@ -24,6 +35,9 @@ body {
     background-size: auto 100%;
 }
 
+/* =================================
+   ロゴ・フレーズ
+================================= */
 .logo-title {
     text-align: center;
     padding: 2rem 1rem;
@@ -46,7 +60,9 @@ body {
     letter-spacing: 0.03em;
 }
 
-/* ナビバー */
+/* =================================
+   ナビゲーション
+================================= */
 .navbar {
     display: flex;
     justify-content: center;
@@ -66,9 +82,8 @@ body {
 .nav-links a {
     text-decoration: none;
     color: #FFF8F0;
-    padding: 0.3rem 0.4rem 0.4rem 0.4rem;
+    padding: 0.3rem 0.6rem;
     border-radius: 6px;
-    font-family: 'ZenMaruGothic', sans-serif;
     font-weight: 600;
 }
 
@@ -76,8 +91,20 @@ body {
     background-color: #9cc5af;
 }
 
-h1,
-h2 {
+/* =================================
+   セクション共通
+================================= */
+section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
+
+/* =================================
+   見出し・テキスト
+================================= */
+h1, h2 {
     font-family: 'ZenMaruGothic', sans-serif;
     font-weight: 600;
     color: #a47f5c;
@@ -85,114 +112,138 @@ h2 {
     margin: 0.5rem 0;
 }
 
-p {
+p, li {
     font-family: 'ZenMaruGothic', sans-serif;
-    color: #a47f5c;
+    color: #7e634a;
+    margin-bottom: 0.5rem;
 }
 
 li {
     list-style: none;
-    color: #a47f5c;
 }
 
+/* =================================
+   プロフィール
+================================= */
 .profile {
     display: flex;
     flex-wrap: wrap;
-    max-width: 600px;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 2rem;
     padding: 2rem 1rem;
+    max-width: 600px;
     margin: auto;
     background-color: #fff8f0;
     border-radius: 12px;
 }
 
 .profile-img {
-    width: 164px;
+    width: 150px;
     height: auto;
-    border-radius: 100px;
-    margin-right: 1.8rem;
+    border-radius: 16px;
 }
 
 .profile-text {
     flex: 1;
 }
 
-.profile-text h2 {
+/* =================================
+   アイコン縦並び・ツールチップ
+================================= */
+.profile-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #A7C796;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF8F0;
+    font-weight: bold;
     font-family: 'ZenMaruGothic', sans-serif;
-    color: #a47f5c;
-    margin-left: -0.3rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    position: relative;
 }
 
-.profile-text p {
-    font-family: 'ZenMaruGothic', sans-serif;
-    color: #a47f5c;
-    margin-bottom: 0.5rem;
+/* ツールチップ */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin: 0 0.5rem;
+    cursor: pointer;
 }
 
-section {
-    max-width: 900px;
-    /* セクションの最大幅を設定 */
-    margin: 0 auto;
-    /* 左右自動で中央寄せ */
-    padding: 2rem 1rem;
-    /* 上下・左右の余白 */
-    box-sizing: border-box;
-    /* パディング込みで幅を計算 */
-}
-
-.favorite {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 1rem;
-}
-
-.favorite h2 {
-    font-family: 'ZenMaruGothic', sans-serif;
-    color: #A7C796;
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: max-content;
+    background-color: #A7C796;
+    color: #FFF8F0;
     text-align: center;
-    margin-bottom: 1.5rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.2s;
+    font-size: 0.8rem;
+    white-space: nowrap;
 }
 
-/* カード全体を横並びに */
-.favorite-cards {
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #A7C796 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* =================================
+   作品・お気に入りカード
+================================= */
+.favorite-cards,
+.works-grid,
+.flavors-grid {
     display: flex;
     flex-wrap: wrap;
-    /* 画面が狭いときは縦並び */
     gap: 1rem;
     justify-content: center;
 }
 
-/* 各カードの見た目 */
 .card {
     background-color: #FFF8F0;
     border-radius: 12px;
     padding: 1rem;
     width: 200px;
-    /* 横幅固定 */
     text-align: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .card .icon {
     width: 56px;
     height: 56px;
-    display: block;
     margin: 0 auto 0.6rem auto;
     transition: transform 0.2s;
 }
 
 .card:hover .icon {
     transform: scale(1.1);
-}
-
-.game-icon {
-    transform: scale(1.4);
-}
-
-.card:hover .game-icon {
-    transform: scale(1.5);
 }
 
 .card h3 {
@@ -206,39 +257,67 @@ section {
     color: #a47f5c;
     font-size: 0.95rem;
 }
-.friends{
-  text-align:center;
-  margin:3rem auto;
+
+/* =================================
+   もっとみるリンク
+================================= */
+.more-link {
+    display: inline;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    color: #7e634a;
+    text-decoration: none;
 }
 
-.friend-banners{
-  display:flex;
-  justify-content:center;
-  gap:1rem;
-  flex-wrap:wrap;
+.more-link:hover {
+    text-decoration: underline;
 }
 
-.friend-banners img{
-  width:200px;
-  height:auto;
-  border-radius:8px;
-  transition:transform 0.2s;
+/* =================================
+   SNS
+================================= */
+.sns-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
-.friend-banners img:hover{
-  transform:scale(1.05);
+.sns-icons img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
 }
+
+/* =================================
+   お友達バナー
+================================= */
+.friend-banners {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.friend-banners img {
+    width: 200px;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.friend-banners img:hover {
+    transform: scale(1.05);
+}
+
+/* =================================
+   フッター
+================================= */
 .site-footer {
     background-color: #BCD2B7;
-    /* メイングリーン */
     text-align: center;
-    /* 中央寄せ */
     padding: 0.2rem 0;
-    /* 上下に余白 */
     font-family: 'ZenMaruGothic', sans-serif;
     font-size: 0.7rem;
-    /* 少し小さめの文字 */
-    /* 文字はクリーム色でかわいく */
     margin-top: 2rem;
-    /* 本文との間に余白 */
 }
