@@ -5,6 +5,7 @@
     font-weight: 400;
     font-style: normal;
 }
+
 /* オーニングとロゴ */
 .awning {
     height: 100px;
@@ -33,6 +34,7 @@
     margin-top: 0.5rem;
     letter-spacing: 0.03em;
 }
+
 /* 全体 */
 body {
     margin: 0;
@@ -47,6 +49,16 @@ section {
     margin: 0 auto;
     padding: 2rem 1rem;
     box-sizing: border-box;
+}
+
+section+section {
+    border-top: 1px dashed #E6D6C9;
+    padding-top: 2rem;
+    margin-top: 3rem;
+}
+
+section h2 {
+    color: #A7C796;
 }
 
 /* ナビバー共通 */
